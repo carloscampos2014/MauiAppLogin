@@ -32,13 +32,12 @@ public partial class Login : ContentPage
             }
             else
             {
-                await SecureStorage.SetAsync("usuario", string.Empty);
+                SecureStorage.Default.Remove("usuario");
                 await DisplayAlertAsync("Falha", "Usuário ou senha incorretos.", "OK");
             }
         }
         catch (Exception ex)
         {
-
             await DisplayAlertAsync("Ops..", $"Ocorreu um erro no Login -> {Environment.NewLine}{ex.Message}", "OK");
         }
     }

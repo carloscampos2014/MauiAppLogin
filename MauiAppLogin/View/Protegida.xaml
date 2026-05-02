@@ -3,10 +3,59 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppLogin.View.Protegida"
              Title="Protegida">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#3d90d4" Offset="0.3" />
+            <GradientStop Color="#1563a3" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
+    <VerticalStackLayout
+        VerticalOptions="Center"
+        Padding="10"
+        Spacing="10">
+        <Border>
+            <Border.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="TextColor" Value="White" />
+                </Style>
+                <Style TargetType="Entry">
+                    <Setter Property="BackgroundColor" Value="White" />
+                    <Setter Property="TextColor" Value="Black" />
+                    <Setter Property="HeightRequest" Value="40" />
+                    <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                </Style>
+                <Style TargetType="Button">
+                    <Setter Property="BackgroundColor" Value="#31395e" />
+                    <Setter Property="TextColor" Value="White" />
+                    <Setter Property="CornerRadius" Value="5" />
+                    <Setter Property="HeightRequest" Value="40" />
+                </Style>
+            </Border.Resources>
+            <VerticalStackLayout
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Padding="20"
+                Spacing="20">
+                <Label 
+                    Text="Área Protegida"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    FontSize="24"
+                    FontAttributes="Bold"/>
+                <Label x:Name="lblMensagem"
+                    Text="Bem-vindo à página protegida!"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    FontSize="18"/>
+                <Button 
+                    Text="Sair" 
+                    CornerRadius="5" 
+                    HorizontalOptions="Center" 
+                    MinimumWidthRequest="100"
+                    Clicked="Button_Clicked"/>
+                </VerticalStackLayout>
+        </Border>
     </VerticalStackLayout>
 </ContentPage>

@@ -9,28 +9,28 @@
             <GradientStop Color="#1563a3" Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
-    <ContentPage.Resources>
-        <Style TargetType="Label">
-            <Setter Property="TextColor" Value="White" />
-        </Style>
-        <Style TargetType="Entry">
-            <Setter Property="BackgroundColor" Value="White" />
-            <Setter Property="TextColor" Value="Black" />
-            <Setter Property="HeightRequest" Value="40" />
-            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
-        </Style>
-        <Style TargetType="Button">
-            <Setter Property="BackgroundColor" Value="#31395e" />
-            <Setter Property="TextColor" Value="White" />
-            <Setter Property="CornerRadius" Value="5" />
-            <Setter Property="HeightRequest" Value="40" />
-        </Style>
-    </ContentPage.Resources>
 
     <VerticalStackLayout
         VerticalOptions="Center"
         Padding="10"
         Spacing="10">
+        <VerticalStackLayout.Resources>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#31395e" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="HeightRequest" Value="40" />
+            </Style>
+        </VerticalStackLayout.Resources>
         <Label 
             Text="Sistema de Login"
             VerticalOptions="Center" 
